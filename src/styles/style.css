@@ -13,7 +13,7 @@ p {
   max-width: 65ch;
 }
 
-h1,
+h2,
 p,
 a {
   font-family: "Raleway", sans-serif;
@@ -22,7 +22,7 @@ a {
   font-style: normal;
 }
 
-h1 {
+h2 {
   font-size: 60px !important;
 }
 
