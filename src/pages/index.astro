@@ -1,15 +1,282 @@
 ---
+import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import { Image } from "astro:assets";
+import calming from "../assets/images/calming.svg";
+import calming_white from "../assets/images/calming_white.svg";
+import calming_rose from "../assets/images/calming_rose.svg";
+import calming_blue from "../assets/images/calming_blue.svg";
+import calming_green from "../assets/images/calming_green.svg";
+import calming_beige from "../assets/images/calming_beige.svg";
+import moodboard from "../assets/images/moodboard.png";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <section class="max-w-max mx-auto h-96 flex justify-center">
+    <Image src={calming} alt="" width="600" />
+  </section>
+  <section class="grid grid-cols-[600px_1fr] gap-3 m-12" id="tanken_bag">
+    <div class="flex flex-col gap-2">
+      <h1>Tanken bag calming</h1>
+      <div class="flex flex-col gap-2">
+        <p>
+          Skrifttypen er inspireret af det feminine, enkle, flydende og elegante
+          ved en skrift.
+        </p>
+        <p>
+          Jeg blev fascineret af andre skrifter, hvor runde former og
+          sammenhængende bogstaver var i fokus.
+        </p>
+        <p>
+          Min umiddelbare tanke bag skriften var at den skulle passe ind i et
+          roligt og afslappende univers.
+        </p>
+      </div>
+    </div>
+    <Image src={moodboard} alt="" />
+  </section>
+
+  <section class="m-12 flex flex-col gap-10 mt-32" id="anvendelse">
+    <div class="flex flex-col gap-2">
+      <h1>Inspiration til anvendelse</h1>
+      <p>
+        Eksempler på forskellige farvekombinationer, som matcher æstetikken af
+        skrifttypen.
+      </p>
+    </div>
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-row gap-4">
+        <div class="bg-[#CCA894] w-fit p-6">
+          <Image src={calming_white} alt="" width="300" />
+        </div>
+        <div class="bg-[#CCA894] w-fit p-6">
+          <Image src={calming} alt="" width="300" />
+        </div>
+        <div class="bg-white w-fit p-6">
+          <Image src={calming_rose} alt="" width="300" />
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <div class="bg-[#ADB0A5] w-fit p-6">
+          <Image src={calming_white} alt="" width="300" />
+        </div>
+        <div class="bg-[#CCA894] w-fit p-6">
+          <Image src={calming} alt="" width="300" />
+        </div>
+        <div class="bg-white w-fit p-6">
+          <Image src={calming_green} alt="" width="300" />
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <div class="bg-[#6C7A7F] w-fit p-6">
+          <Image src={calming_white} alt="" width="300" />
+        </div>
+        <div class="bg-[#CCA894] w-fit p-6">
+          <Image src={calming} alt="" width="300" />
+        </div>
+        <div class="bg-white w-fit p-6">
+          <Image src={calming_blue} alt="" width="300" />
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <div class="bg-[#F1ECE6] w-fit p-6">
+          <Image src={calming_white} alt="" width="300" />
+        </div>
+        <div class="bg-[#CCA894] w-fit p-6">
+          <Image src={calming} alt="" width="300" />
+        </div>
+        <div class="bg-white w-fit p-6">
+          <Image src={calming_beige} alt="" width="300" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-12 flex flex-col gap-4 mt-20">
+    <p>
+      Bogstaverne kan også benyttes i forbindelse med et logo eller et symbol.
+    </p>
+    <div class="flex flex-row gap-4">
+      <div class="p-8 bg-[#ADB0A5] w-fit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="237"
+          height="186"
+          viewBox="0 0 237 186"
+          fill="none"
+        >
+          <g filter="url(#filter0_d_38_798)">
+            <path
+              d="M170.426 2.08817C147.503 2.16672 129.652 16.5798 119.626 35.5486C117.227 30.9929 114.2 26.7515 110.858 23.0206C96.585 5.9369 72.7579 -4.19548 51.4079 6.44745C40.32 11.8278 31.8664 20.5857 26.3618 30.8751C26.755 23.8453 27.1875 16.8155 27.6594 9.78564H8C11.7746 63.5894 12.443 117.589 11.3421 171.511H24.3173C23.7275 142.92 23.6882 114.33 24.3173 85.7785C26.3618 90.177 28.9569 94.3792 32.2203 98.1887C45.3528 115.194 71.1459 124.423 90.6086 112.759C99.1408 107.771 105.471 100.702 110.74 92.8476C110.582 119.082 110.189 145.316 109.639 171.55H124.58C123.912 140.171 123.44 108.792 123.361 77.4134C123.518 50.1581 142.47 21.4104 170.976 21.6853C196.887 20.4678 210.885 41.4788 208.958 65.6708C209.037 73.4861 209.469 115.704 209.548 124.501C209.902 140.211 210.059 155.88 210.609 171.59H227.045C228.106 137.304 228.46 94.2221 228.696 59.7799C229.404 27.4584 203.414 -0.111106 170.465 2.12744L170.426 2.08817ZM69.7304 103.805C59.4289 103.333 49.0094 98.6207 42.1679 90.1378C25.025 69.7159 31.9844 32.014 58.7211 24.0809C83.9244 15.6766 116.638 29.5791 110.347 60.1726C107.044 80.2803 92.6532 104.787 69.691 103.844L69.7304 103.805Z"
+              fill="url(#paint0_linear_38_798)"></path>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_38_798"
+              x="0"
+              y="0"
+              width="236.71"
+              height="185.59"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"></feColorMatrix>
+              <feOffset dy="6"></feOffset>
+              <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.250712 0 0 0 0 0.256803 0 0 0 0 0.234467 0 0 0 0.35 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_38_798"></feBlend>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_38_798"
+                result="shape"></feBlend>
+            </filter>
+            <linearGradient
+              id="paint0_linear_38_798"
+              x1="118.355"
+              y1="2"
+              x2="118.355"
+              y2="171.59"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#ADB0A5"></stop>
+              <stop offset="1" stop-color="#B8BBB0"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="p-8 bg-[#6C7A7F] w-fit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="237"
+          height="186"
+          viewBox="0 0 237 186"
+          fill="none"
+        >
+          <g filter="url(#filter0_d_38_1177)">
+            <path
+              d="M170.427 2.08817C147.504 2.16672 129.653 16.5798 119.627 35.5486C117.228 30.9929 114.201 26.7515 110.859 23.0206C96.586 5.9369 72.7589 -4.19548 51.4088 6.44745C40.321 11.8278 31.8674 20.5857 26.3628 30.8751C26.756 23.8453 27.1885 16.8155 27.6603 9.78564H8.00098C11.7756 63.5894 12.444 117.589 11.3431 171.511H24.3182C23.7285 142.92 23.6891 114.33 24.3182 85.7785C26.3628 90.177 28.9578 94.3792 32.2213 98.1887C45.3537 115.194 71.1468 124.423 90.6096 112.759C99.1418 107.771 105.472 100.702 110.741 92.8476C110.583 119.082 110.19 145.316 109.64 171.55H124.581C123.913 140.171 123.441 108.792 123.362 77.4134C123.519 50.1581 142.471 21.4104 170.977 21.6853C196.888 20.4678 210.885 41.4788 208.959 65.6708C209.038 73.4861 209.47 115.704 209.549 124.501C209.903 140.211 210.06 155.88 210.61 171.59H227.045C228.107 137.304 228.461 94.2221 228.697 59.7799C229.405 27.4584 203.415 -0.111106 170.466 2.12744L170.427 2.08817ZM69.7313 103.805C59.4298 103.333 49.0104 98.6207 42.1689 90.1378C25.026 69.7159 31.9854 32.014 58.7221 24.0809C83.9254 15.6766 116.639 29.5791 110.348 60.1726C107.045 80.2803 92.6541 104.787 69.692 103.844L69.7313 103.805Z"
+              fill="url(#paint0_linear_38_1177)"></path>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_38_1177"
+              x="0.000976562"
+              y="0"
+              width="236.71"
+              height="185.59"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"></feColorMatrix>
+              <feOffset dy="6"></feOffset>
+              <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.250712 0 0 0 0 0.256803 0 0 0 0 0.234467 0 0 0 0.35 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_38_1177"></feBlend>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_38_1177"
+                result="shape"></feBlend>
+            </filter>
+            <linearGradient
+              id="paint0_linear_38_1177"
+              x1="118.356"
+              y1="2"
+              x2="118.356"
+              y2="171.59"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#7D8D92"></stop>
+              <stop offset="1" stop-color="#6C7A7F"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="p-8 bg-[#37332F] w-fit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="237"
+          height="186"
+          viewBox="0 0 237 186"
+          fill="none"
+        >
+          <g filter="url(#filter0_d_38_1180)">
+            <path
+              d="M170.426 2.08817C147.503 2.16672 129.653 16.5798 119.626 35.5486C117.228 30.9929 114.2 26.7515 110.858 23.0206C96.5855 5.9369 72.7584 -4.19548 51.4083 6.44745C40.3205 11.8278 31.8669 20.5857 26.3623 30.8751C26.7555 23.8453 27.188 16.8155 27.6598 9.78564H8.00049C11.7751 63.5894 12.4435 117.589 11.3426 171.511H24.3178C23.728 142.92 23.6887 114.33 24.3178 85.7785C26.3623 90.177 28.9573 94.3792 32.2208 98.1887C45.3532 115.194 71.1463 124.423 90.6091 112.759C99.1413 107.771 105.472 100.702 110.74 92.8476C110.583 119.082 110.19 145.316 109.639 171.55H124.58C123.912 140.171 123.44 108.792 123.362 77.4134C123.519 50.1581 142.47 21.4104 170.977 21.6853C196.888 20.4678 210.885 41.4788 208.958 65.6708C209.037 73.4861 209.47 115.704 209.548 124.501C209.902 140.211 210.059 155.88 210.61 171.59H227.045C228.107 137.304 228.46 94.2221 228.696 59.7799C229.404 27.4584 203.414 -0.111106 170.465 2.12744L170.426 2.08817ZM69.7308 103.805C59.4293 103.333 49.0099 98.6207 42.1684 90.1378C25.0255 69.7159 31.9849 32.014 58.7216 24.0809C83.9249 15.6766 116.638 29.5791 110.347 60.1726C107.044 80.2803 92.6536 104.787 69.6915 103.844L69.7308 103.805Z"
+              fill="url(#paint0_linear_38_1180)"></path>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_38_1180"
+              x="0.000488281"
+              y="0"
+              width="236.71"
+              height="185.59"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"></feColorMatrix>
+              <feOffset dy="6"></feOffset>
+              <feGaussianBlur stdDeviation="4"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.250712 0 0 0 0 0.256803 0 0 0 0 0.234467 0 0 0 0.35 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_38_1180"></feBlend>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_38_1180"
+                result="shape"></feBlend>
+            </filter>
+            <linearGradient
+              id="paint0_linear_38_1180"
+              x1="118.355"
+              y1="2"
+              x2="118.355"
+              y2="171.59"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.81" stop-color="#625F5B"></stop>
+              <stop offset="1" stop-color="#37332F"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
 </MainLayout>
